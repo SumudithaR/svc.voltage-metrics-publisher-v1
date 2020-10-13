@@ -1,1 +1,0 @@
-# svc.voltage-metrics-publisher
