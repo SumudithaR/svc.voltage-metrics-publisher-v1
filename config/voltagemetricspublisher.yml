@@ -24,6 +24,9 @@ voltagemetricspublisher:
 ### sample foo option
 # foo: bar
 
+kafka_settings:
+    host: 127.0.0.1:9092
+    topic_name: raw-voltage-metrics
 
 log.colorlog:
 
@@ -34,10 +37,10 @@ log.colorlog:
 level: info
 
 ### Whether or not to log to console
-# to_console: true
+to_console: true
 
 ### Whether or not to rotate the log file when it reaches `max_bytes`
-# rotate: false
+rotate: true
 
 ### Max size in bytes that a log file can grow until it is rotated.
 # max_bytes: 512000

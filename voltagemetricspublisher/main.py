@@ -3,10 +3,11 @@ from cement import App, TestApp, init_defaults
 from cement.core.exc import CaughtSignal
 from .core.exc import VoltageMetricsPublisherError
 from .controllers.base import Base
+from .controllers.voltageMetrics import VoltageMetrics
 
 # configuration defaults
 CONFIG = init_defaults('voltagemetricspublisher')
-CONFIG['voltagemetricspublisher']['foo'] = 'bar'
+#CONFIG['voltagemetricspublisher']['foo'] = 'bar'
 
 
 class VoltageMetricsPublisher(App):
@@ -42,7 +43,8 @@ class VoltageMetricsPublisher(App):
 
         # register handlers
         handlers = [
-            Base
+            Base,
+            VoltageMetrics
         ]
 
 
